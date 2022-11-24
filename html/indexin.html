@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active  text-warning fw-bold fs-3" id="ALL-tab" data-bs-toggle="tab" href="#ALL" role="tab" aria-controls="ALL"
+        aria-selected="true">ALL Rankings</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link  text-warning fw-bold fs-3" id="THE-tab" data-bs-toggle="tab" href="#THE" role="tab" aria-controls="THE"
+        aria-selected="false">THE</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link  text-warning fw-bold fs-3" id="QS-tab" data-bs-toggle="tab" href="#QS" role="tab" aria-controls="QS"
+        aria-selected="false">QS</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link  text-warning fw-bold fs-3 " id="RUR-tab" data-bs-toggle="tab" href="#RUR" role="tab" aria-controls="RUR"
+        aria-selected="false">RUR</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="ALL" role="tabpanel" aria-labelledby="ALL-tab">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th class="col" style="width: 35%" scope="col">Name</th>
+              <th scope="col" style="width: 25%">Location</th>
+              <th scope="col">Score</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    1
+                  </span>
+                </h4>
+              </th>
+              <td>Harvard University</td>
+              <td>United States</td>
+              <td>97.57%</td>
+              <td>
+                <img src="../images/Harvard.jpg" alt="../images/Harvard.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    2
+                  </span>
+                </h4>
+              </th>
+              <td>Massachusetts Institute of Technology (MIT)</td>
+              <td>United States</td>
+              <td>97.20%</td>
+              <td>
+                <img src="../images/MIT.jpg" alt="../images/MIT.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    3
+                  </span>
+                </h4>
+              </th>
+              <td>Stanford University</td>
+              <td>United States</td>
+              <td>96.88%</td>
+              <td>
+                <img src="../images/stanford.jpg" alt="../images/stanford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    4
+                  </span>
+                </h4>
+              </th>
+              <td>University of Oxford</td>
+              <td>United Kingdom</td>
+              <td>96.00%</td>
+              <td>
+                <img src="../images/oxford.jpg" alt="../images/oxford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    5
+                  </span>
+                </h4>
+              </th>
+              <td>California Institute of Technology (Caltech)</td>
+              <td>United States</td>
+              <td>95.75%</td>
+              <td>
+                <img src="../images/caltech.jpg" alt="../images/caltech.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    6
+                  </span>
+                </h4>
+              </th>
+              <td>University of Cambridge</td>
+              <td>United Kingdom</td>
+              <td>94.57%</td>
+              <td>
+                <img src="../images/cambridge.jpg" alt="../images/cambridge.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    7
+                  </span>
+                </h4>
+              </th>
+              <td>Imperial College London</td>
+              <td>United Kingdom</td>
+              <td>93.56%%</td>
+              <td>
+                <img src="../images/imperial.jpg" alt="../images/imperial.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    8
+                  </span>
+                </h4>
+              </th>
+              <td>Princeton University</td>
+              <td>United States</td>
+              <td>91.96%</td>
+              <td>
+                <img src="../images/princeton.jpg" alt="../images/princeton.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    9
+                  </span>
+                </h4>
+              </th>
+              <td>Yale University</td>
+              <td>United States</td>
+              <td>91.39%</td>
+              <td>
+                <img src="../images/yale.jpg" alt="../images/yale.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    10
+                  </span>
+                </h4>
+              </th>
+              <td>University of Pennsylvania</td>
+              <td>United States</td>
+              <td>90.71%</td>
+              <td>
+                <img src="../images/Pennsylvania1.jpg" alt="../images/Pennsylvania1.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="THE" role="tabpanel" aria-labelledby="THE-tab">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th class="col" style="width: 35%" scope="col">Name</th>
+              <th scope="col" style="width: 25%">Location</th>
+              <th scope="col">Score</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    1
+                  </span>
+                </h4>
+              </th>
+              <td>University of Oxford</td>
+              <td>United Kingdom</td>
+              <td>95.60%</td>
+              <td>
+                <img src="../images/oxford.jpg" alt="../images/oxford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    2
+                  </span>
+                </h4>
+              </th>
+              <td>Stanford University</td>
+              <td>United States</td>
+              <td>94.90%</td>
+              <td>
+                <img src="../images/stanford.jpg" alt="../images/stanford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    3
+                  </span>
+                </h4>
+              </th>
+              <td>Harvard University</td>
+              <td>United States</td>
+              <td>94.80%</td>
+              <td>
+                <img src="../images/Harvard.jpg" alt="../images/Harvard.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    4
+                  </span>
+                </h4>
+              </th>
+              <td>California Institute of Technology (Caltech)</td>
+              <td>United States</td>
+              <td>94.50%</td>
+              <td>
+                <img src="../images/caltech.jpg" alt="../images/caltech.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    5
+                  </span>
+                </h4>
+              </th>
+              <td>Massachusetts Institute of Technology (MIT)</td>
+              <td>United States</td>
+              <td>94.40%</td>
+              <td>
+                <img src="../images/MIT.jpg" alt="../images/MIT.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    6
+                  </span>
+                </h4>
+              </th>
+              <td>University of Cambridge</td>
+              <td>United Kingdom</td>
+              <td>94.00%</td>
+              <td>
+                <img src="../images/cambridge.jpg" alt="../images/cambridge.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    7
+                  </span>
+                </h4>
+              </th>
+              <td>University of California, Berkeley</td>
+              <td>United States</td>
+              <td>92.20%</td>
+              <td>
+                <img src="../images/berkeley.jpg" alt="../images/berkeley.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    8
+                  </span>
+                </h4>
+              </th>
+              <td>Yale University</td>
+              <td>United States</td>
+              <td>91.60</td>
+              <td>
+                <img src="../images/yale.jpg" alt="../images/yale.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    9
+                  </span>
+                </h4>
+              </th>
+              <td>Princeton University</td>
+              <td>United States</td>
+              <td>91.50%</td>
+              <td>
+                <img src="../images/princeton.jpg" alt="../images/princeton.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    10
+                  </span>
+                </h4>
+              </th>
+              <td>The University of Chicago</td>
+              <td>United States</td>
+              <td>90.30%</td>
+              <td>
+                <img src="../images/chicago.jpg" alt="../images/chicago.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="QS" role="tabpanel" aria-labelledby="QS-tab">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th class="col" style="width: 35%" scope="col">Name</th>
+              <th scope="col" style="width: 25%">Location</th>
+              <th scope="col">Score</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    1
+                  </span>
+                </h4>
+              </th>
+              <td>Massachusetts Institute of Technology (MIT)</td>
+              <td>United States</td>
+              <td>100.00%</td>
+              <td>
+                <img src="../images/MIT.jpg" alt="../images/MIT.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    2
+                  </span>
+                </h4>
+              </th>
+              <td>Stanford University</td>
+              <td>United States</td>
+              <td>98.40%</td>
+              <td>
+                <img src="../images/stanford.jpg" alt="../images/stanford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    3
+                  </span>
+                </h4>
+              </th>
+              <td>Harvard University</td>
+              <td>United States</td>
+              <td>97.90%</td>
+              <td>
+                <img src="../images/Harvard.jpg" alt="../images/Harvard.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    4
+                  </span>
+                </h4>
+              </th>
+              <td>California Institute of Technology (Caltech)</td>
+              <td>Unite States</td>
+              <td>97.00%</td>
+              <td>
+                <img src="../images/caltech.jpg" alt="../images/caltech.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    5
+                  </span>
+                </h4>
+              </th>
+              <td>University of Oxford</td>
+              <td>Unite Kingdom</td>
+              <td>96.70%</td>
+              <td>
+                <img src="../images/oxford.jpg" alt="../images/oxford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    6
+                  </span>
+                </h4>
+              </th>
+              <td>ETH Zurich - Swiss Federal Institute of Technology</td>
+              <td>Switzerland</td>
+              <td>95.00%</td>
+              <td>
+                <img src="../images/zurich.jpg" alt="../images/zurich.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    7
+                  </span>
+                </h4>
+              </th>
+              <td>University of Cambridge</td>
+              <td>Unite Kingdom</td>
+              <td>94.30%</td>
+              <td>
+                <img src="../images/cambridge.jpg" alt="../images/cambridge.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    8
+                  </span>
+                </h4>
+              </th>
+              <td>Imperial College London</td>
+              <td>Unite Kingdom</td>
+              <td>93.60%</td>
+              <td>
+                <img src="../images/imperial.jpg" alt="../images/imperial.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    9
+                  </span>
+                </h4>
+              </th>
+              <td>University of Chicago</td>
+              <td>United States</td>
+              <td>93.10%</td>
+              <td>
+                <img src="../images/chicago.jpg" alt="../images/chicago.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    10
+                  </span>
+                </h4>
+              </th>
+              <td>University College London</td>
+              <td>Unite Kingdom</td>
+              <td>92.90%</td>
+              <td>
+                <img src="../images/UCL.jpg" alt="../images/UCL.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="RUR" role="tabpanel" aria-labelledby="RUR-tab">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th class="col" style="width: 35%" scope="col">Name</th>
+              <th scope="col" style="width: 25%">Location</th>
+              <th scope="col">Score</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    1
+                  </span>
+                </h4>
+              </th>
+              <td>Harvard University</td>
+              <td>United States</td>
+              <td>100.00%</td>
+              <td>
+                <img src="../images/Harvard.jpg" alt="../images/Harvard.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    2
+                  </span>
+                </h4>
+              </th>
+              <td>California Institute of Technology (Caltech)</td>
+              <td>United States</td>
+              <td>99.30%</td>
+              <td>
+                <img src="../images/caltech.jpg" alt="../images/caltech.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    3
+                  </span>
+                </h4>
+              </th>
+              <td>Imperial College London</td>
+              <td>United Kingdom</td>
+              <td>97.60%</td>
+              <td>
+                <img src="../images/imperial.jpg" alt="../images/imperial.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    4
+                  </span>
+                </h4>
+              </th>
+              <td>Stanford University</td>
+              <td>United States</td>
+              <td>97.40%</td>
+              <td>
+                <img src="../images/stanford.jpg" alt="../images/stanford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    5
+                  </span>
+                </h4>
+              </th>
+              <td>Massachusetts Institute of Technology (MIT)</td>
+              <td>United States</td>
+              <td>96.30%</td>
+              <td>
+                <img src="../images/MIT.jpg" alt="../images/MIT.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    6
+                  </span>
+                </h4>
+              </th>
+              <td>University of Oxford</td>
+              <td>United Kingdom</td>
+              <td>95.70%</td>
+              <td>
+                <img src="../images/oxford.jpg" alt="../images/oxford.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    7
+                  </span>
+                </h4>
+              </th>
+              <td>University of Cambridge</td>
+              <td>United Kingdom</td>
+              <td>95.40%</td>
+              <td>
+                <img src="../images/cambridge.jpg" alt="../images/cambridge.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    8
+                  </span>
+                </h4>
+              </th>
+              <td>University of Chicago</td>
+              <td>United States</td>
+              <td>95.39%</td>
+              <td>
+                <img src="../images/chicago.jpg" alt="../images/chicago.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    9
+                  </span>
+                </h4>
+              </th>
+              <td>ETH Zurich (Swiss Federal Institute of Technology)</td>
+              <td>Switzerland</td>
+              <td>95.36%</td>
+              <td>
+                <img src="../images/zurich.jpg" alt="../images/zurich.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <h4>
+                  <span class="badge bg-warning">
+                    10
+                  </span>
+                </h4>
+              </th>
+              <td>University College London</td>
+              <td>Unite Kingdom</td>
+              <td>95.00%</td>
+              <td>
+                <img src="../images/UCL.jpg" alt="../images/UCL.jpg" class="img-thumbnail w-50">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+</body>
+
+</html>

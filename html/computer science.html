@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <link rel="stylesheet" type="text/css" href="../css/tables.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link href="../css/styles.css " rel="stylesheet ">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        td.details-control {
+            background: url('https://cdn.iconscout.com/icon/free/png-64/down-chevron-458459.png') no-repeat center center;
+            background-size: 30%;
+            cursor: pointer;
+        }
+        tr.shown td.details-control {
+            background: url('https://cdn.iconscout.com/icon/free/png-64/up-chevron-458462.png') no-repeat center center;
+            background-size: 30%;
+        }
+    </style>
+   </head>
+   <body>
+    <table id="example" class="display" style="width:100%; background-color: #171717;">
+        <thead style="color: whitesmoke;">
+            <tr>
+                <th></th>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Subject score</th>
+            </tr>
+        </thead>
+    </table>
+      <script>
+          /* Formatting function for row details - modify as you need */
+function format ( d ) {
+    // `d` is the original data object for the row
+    var s = "<td>";
+            s += '<div class="container-fluid ">';
+            s += '<div class="row mt-3 ">';
+            s += '<div class="col-xl-4 col-md-6 mb-4 ">';
+            s += '<div class="card border-left-success shadow h-100 py-2 ">';
+            s += '<div class="card-body ">';
+            s += '<div class="row no-gutters align-items-center ">';
+            s += '                <div class="col mr-2 ">';
+            s += '                    <div class="text text-success ">Overall</div>';
+            s += '                    <div class="row gutters align-items-center ">';
+            s += '                        <div class="col ">';
+            s += '                            <div class="progress mr-2 ">';
+            s += '                                <div class="progress-bar bg-success" id="overall" role="progressbar " style="width: ' + d.overall + '%" aria-valuenow="' + d.overall + '" aria-valuemin="0 " aria-valuemax="100">' + d.overall + '%</div>';
+            s += '                            </div>';
+            s += '                        </div>';
+            s += '                    </div>';
+            s += '                </div>';
+            s += '                <div class="col-auto ">';
+            s += '                    <i class="fas fa-chart-bar fa-2x text-gray-300 "></i>';
+            s += '                </div>';
+            s += '            </div>';
+            s += '        </div>';
+            s += '    </div>';
+            s += '</div>';
+            s += '<div class="col-xl-4 col-md-6 mb-4 ">';
+            s += '    <div class="card border-left-success shadow h-100 py-2 ">';
+            s += '        <div class="card-body ">';
+            s += '            <div class="row no-gutters align-items-center ">';
+            s += '                <div class="col mr-2 ">';
+            s += '                    <div class="text text-danger ">Teaching</div>';
+            s += '                    <div class="row gutters align-items-center ">';
+            s += '                        <div class="col ">';
+            s += '                            <div class="progress mr-2 ">';
+            s += '                                <div class="progress-bar bg-danger " id="teaching" role="progressbar " style="width: ' + d.teaching + '% " aria-valuenow="' + d.teaching + ' " aria-valuemin="0 " aria-valuemax="100 ">' + d.teaching + '%</div>';
+            s += '                            </div>';
+            s += '                        </div>';
+            s += '                    </div>';
+            s += '                </div>';
+            s += '                <div class="col-auto ">';
+            s += '                    <i class="fas fa-chalkboard-teacher fa-2x text-gray-300 "></i>';
+            s += '                </div>';
+            s += '            </div>';
+            s += '        </div>';
+            s += '    </div>';
+            s += '</div>';
+            s += ' <div class="col-xl-4 col-md-6 mb-4 ">';
+            s += '     <div class="card border-left-success shadow h-100 py-2 ">';
+            s += '    <div class="card-body ">';
+            s += '         <div class="row no-gutters align-items-center ">';
+            s += '             <div class="col mr-2 ">';
+            s += '                 <div class="text text-warning ">Academic</div>';
+            s += '                <div class="row gutters align-items-center ">';
+            s += '                    <div class="col ">';
+            s += '                         <div class="progress mr-2 ">';
+            s += '                             <div class="progress-bar bg-warning" id="acadamic" role="progressbar " style="width: ' + d.acadamic + '% " aria-valuenow="' + d.acadamic + ' " aria-valuemin="0 " aria-valuemax="100 ">' + d.acadamic + '%</div>';
+            s += '                        </div>';
+            s += '    </div>';
+            s += ' </div>';
+            s += '  </div>';
+            s += '  <div class="col-auto ">';
+            s += '      <i class="fas fa-school fa-2x text-gray-300 "></i>';
+            s += '   </div>';
+            s += ' </div>';
+            s += ' </div>';
+            s += ' </div>';
+            s += '</div>';
+            s += '<div class="col-xl-4 col-md-6 mb-4 ">';
+            s += ' <div class="card border-left-dark shadow h-100 py-2 ">';
+            s += '  <div class="card-body ">';
+            s += '   <div class="row no-gutters align-items-center ">';
+            s += '    <div class="col mr-2 ">';
+            s += '  <div class="text text-dark ">citation</div>';
+            s += '  <div class="row gutters align-items-center ">';
+            s += '     <div class="col ">';
+            s += '        <div class="progress mr-2 ">';
+            s += ' <div class="progress-bar bg-dark " id="citation" role="progressbar " style="width: ' + d.citation + '% " aria-valuenow="' + d.citation + ' " aria-valuemin="0 " aria-valuemax="100 ">' + d.citation + '%</div>';
+            s += ' </div>';
+            s += ' </div>';
+            s += '</div>';
+            s += ' </div>';
+            s += '<div class="col-auto ">';
+            s += '   <i class="fas fa-clipboard-list fa-2x text-gray-300 "></i>';
+            s += '</div>';
+            s += ' </div>';
+            s += '</div>';
+            s += ' </div>';
+            s += ' </div>';
+            s += '<div class="col-xl-4 col-md-6 mb-4 ">';
+            s += '<div class="card border-left-info shadow h-100 py-2 ">';
+            s += '    <div class="card-body ">';
+            s += '       <div class="row no-gutters align-items-center ">';
+            s += '         <div class="col mr-2 ">';
+            s += '           <div class="text text-info ">International</div>';
+            s += '           <div class="row gutters align-items-center ">';
+            s += '        <div class="col ">';
+            s += '           <div class="progress mr-2 ">';
+            s += '               <div class="progress-bar bg-info" id="international" role="progressbar " style="width: ' + d.international + '% " aria-valuenow="' + d.international + ' " aria-valuemin="0 " aria-valuemax="100 ">' + d.international +'%</div>';
+            s += '           </div>';
+            s += '   </div>';
+            s += '  </div>';
+            s += ' </div>';
+            s += ' <div class="col-auto ">';
+            s += '  <i class="fas fa-clipboard-list fa-2x text-gray-300 "></i>';
+            s += '  </div>';
+            s += '</div>';
+            s += ' </div>';
+            s += ' </div>';
+            s += '</div>';
+            s += ' <div class="col-xl-4 col-md-6 mb-4 ">';
+            s += '   <div class="card border-left-secondary shadow h-100 py-2 ">';
+            s += '   <div class="card-body ">';
+            s += '     <div class="row no-gutters align-items-center ">';
+            s += '         <div class="col mr-2 ">';
+            s += '            <div class="text text-secondary ">Financial</div>';
+            s += '     <div class="row gutters align-items-center ">';
+            s += '        <div class="col ">';
+            s += '           <div class="progress mr-2 ">';
+            s += '               <div class="progress-bar bg-secondary " id="financial" role="progressbar " style="width: ' + d.financial + '% " aria-valuenow="' + d.financial + ' " aria-valuemin="0 " aria-valuemax="100">' + d.financial + '%</div>';
+            s += '   </div>';
+            s += '   </div>';
+            s += '   </div>';
+            s += ' </div>';
+            s += ' <div class="col-auto ">';
+            s += '      <i class="fas fa-money-bill fa-2x text-gray-300 "></i>';
+            s += '   </div>';
+            s += ' </div>';
+            s += '</div>';
+            s += '</div>';
+            s += ' </div>';
+            s += '</div>';
+            s += '</div> ';
+            s+= '</td>';
+            return s;
+}
+ 
+$(document).ready(function() {
+    var table = $('#example').DataTable( {
+        "ajax": "../json/computer science.json",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+            { "data": "rank" },
+            { "data": "name" },
+            { "data": "location" },
+            { "data": "computer science" }
+        ],
+        "order": [[1, 'asc']]
+    } );
+     
+    // Add event listener for opening and closing details
+    $('#example tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+} );
+      </script>
+      
+   </body>
+</html> 
